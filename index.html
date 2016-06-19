@@ -1,59 +1,40 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
-  <title>Javascript homework</title>
-  <!-- Add jQuery script add tag here -->
-  <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <script type="text/javascript" src="jquery-2.2.3.min.js"></script>
+  <script type="text/javascript">
+         $(function(){
+	     $("ul.sub").hide();
+		 $("ul.menu li").hover(function(){
+		    $("ul:not(:animated)",this).slideDown("fast");
+			},
+			function(){
+			   $("ul",this).slideUp("fast");
+			});
+      });
+    </script>
+  <title>Project</title>
+ 
 </head>
 <body>
-  <p><strong>For all questions, you must use tag attributes without modification</strong></p>
-  <ol>
-    <li>What does DOM stand for?
-      <div>
-        <button onclick="answer_1()">Check for Q1 answer</button>
-        <p id="q1-answer"></p>
-      </div>
-    </li>
-  
-    <li>Describe two main features that Javascript can do by using DOM
-      <div>
-        <button>Check for Q2 answer - Q2 answer should be written in Javascript (no jQuery)</button>
-        <p id="q2-answer"></p>
-      </div>
-    </li>
-
-    <li>DOM is represented using a tree structure. Describe what parent, child, sibling, descendant, and ancestor nodes mean
-      <div>
-        <button>Check for Q3 answer - Q3 answer should be written in Javascript (no jQuery)</button>
-        <p class="q34-answer"></p>
-      </div>
-    </li>
-
-    <li>Describe what document.getElementById(), document.getElementsByClassName(), document.getElementsByName(), and document.getElementsByTagName() do. <strong>Describe how many elements can be returned from the four functions (one or many)</strong>
-      <div>
-        <button>Check for Q4 answer - Q4 answer should be written in Javascript (no jQuery)</button>
-        <p class="q34-answer"></p>
-      </div>
-    </li>
-
-    <div>
-      <p>HTML snippet for Question 5, 6, and 7</p>
-      <a>Question5</a>
-      <a>Question5</a>
-      <div class='item'>Question6</div>
-      <span class='item'>Question6</span>
-      <div class='item-group'>DO NOT SELECT</div>
-      <div class='demo'>Question7</div>
-      <span class='demo'>DO NOT SELECT</span>
-      <div class='demo'>Question7</div>
-    </div>
- 
-    <li>Using jQuery, change the sentence Question5 to Answer5 when the Question5 string is clicked. You should use attribute of the button tag without modification.</li>
-
-    <li>Using jQuery, change the font size of sentences of Question6 to 3em when         Question6 string is clicked. You should use attribute of the button tag without          modification.</li>
-
-    <li>Using jQuery, change the color of sentence Question7 to blue when the paragraph  Question7 is <strong>double-clicked</strong>. You should use attribute of tags without   modification.</li>
-  </ol>
-  <script type="text/javascript" src="answers.js"></script>
+    <div class="main_logo" ><a href="index.html"><img src="logo.jpg" title="Source: http://blog.naver.com/dark861007/50106235598" id="main_logo"></a></div>
+    <div style="margin-top:100px;" id="main">
+    <ul class="menu">
+        <li id="main_navi"><a><font color="black">T O P 5 ▼</font></a>
+            <ul class="sub" id="TOP5">
+                 <li> <a href="together.html" target="mv"><font color="black">종합 TOP 5</font></a></i>
+                <li> <a href="ballad.html" target="mv"><font color="black">발라드 TOP 5</font></a></li>
+                <li> <a href="hiphop.html" target="mv"><font color="black">힙합 TOP 5</font></a></li>
+                
+            </ul>
+        </li>
+        <li> <a href="news.html"> N e w s</a></li>
+        <li> <a href="magic.html">놀 이 터</a></li>
+        <li class="right-align"> <a href="#home"><font size="1"><b>Updated 2016.05.01</b></font></a></li>
+    </ul></div>
+<div id="iframe_div" margin-bottom="0" hidden="hidden"><iframe width="710" height="1000" src="" frameborder="0" allowfullscreen scrolling="yes" name="mv"></iframe></div>
+    <script type="text/javascript" src="control.js"></script>
 </body>
-</html> 
+</html>
